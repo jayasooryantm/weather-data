@@ -2,7 +2,7 @@ name: Daily Data Fetch
 
 on:
   schedule:
-    - cron: "24 18 * * *"
+    - cron: "26 18 * * *"
 
 jobs:
   run-script:
@@ -26,4 +26,4 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.ACTION_TOKEN }}
+        github_token: "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"
