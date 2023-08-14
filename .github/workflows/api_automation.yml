@@ -2,7 +2,7 @@ name: Daily API Automation
 
 on:
   schedule:
-    - cron: "53 17 * * *"
+    - cron: "56 17 * * *"
 
 jobs:
   run_script:
@@ -21,4 +21,4 @@ jobs:
       run: pip install --upgrade pip
 
     - name: Run Python script
-      run: python your_script.py
+      run: python data-fetcher.py
