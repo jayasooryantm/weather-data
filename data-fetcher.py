@@ -12,5 +12,5 @@ def fetch_api_data(today:str):
 if __name__ == "__main__":
     today = dt.datetime.now().strftime("%Y-%m-%d")
     json_data = fetch_api_data(today)
-    with open(f"api_data_{today}.json", "w") as json_file:
+    with open(f"data/api_data_{today}.json", "w") as json_file:
         json.dump(json_data, json_file, indent=4)
