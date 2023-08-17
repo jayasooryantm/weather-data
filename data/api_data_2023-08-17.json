@@ -29,7 +29,7 @@
                 },
                 {
                     "name": "W",
-                    "units": "",
+                    "units": "str",
                     "$": "Weather Type"
                 },
                 {
