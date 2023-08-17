@@ -15,7 +15,7 @@ jobs:
 
     - name: Run script to zip JSON files
       run: |
-        chmod +x zip_and_delete.sh
+        chmod +x utils.sh
         ./utils.sh
 
     - name: Commit and push changes
