@@ -1,5 +1,6 @@
 import requests as rq
 import datetime as dt
+import shutil
 import json
 
 def fetch_api_data(today:str):
@@ -8,9 +9,15 @@ def fetch_api_data(today:str):
     response = rq.get(data_url)
     return response.json()
 
+def zip_json_files():
+    filepath:str = 'data'
+    output_filepath:str = 'data_bundle'
+    shutil.make_archive(output_filepath, 'zip', filepath)
+
 
 if __name__ == "__main__":
     today = dt.datetime.now().strftime("%Y-%m-%d")
     json_data = fetch_api_data(today)
     with open(f"data/api_data_{today}.json", "w") as json_file:
         json.dump(json_data, json_file, indent=4)
+    zip_json_files()
